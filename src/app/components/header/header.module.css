@@ -1,0 +1,90 @@
+.header {
+  background-color: #000;
+  padding: 15px 0;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ff4d4f;
+}
+
+.cart a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000;
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid #222;
+}
+
+.mobileMenu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .menuBtn {
+    display: block;
+  }
+  
+  .mobileMenu {
+    display: flex;
+  }
+}
