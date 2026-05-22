@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Header } from "../components/header/header";
@@ -151,7 +152,7 @@ const PRODUCTS = {
   }
 };
 
-export default function ChiTietSanPham() {
+function ChiTietSanPhamContent() {
   const searchParams = useSearchParams();
   const productId = searchParams.get("id");
   const product = PRODUCTS[productId];
@@ -289,5 +290,13 @@ export default function ChiTietSanPham() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function ChiTietSanPham() {
+  return (
+    <Suspense fallback={<div style={{textAlign:'center', padding:'50px', color:'#fff'}}>Đang tải...</div>}>
+      <ChiTietSanPhamContent />
+    </Suspense>
   );
 }
