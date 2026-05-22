@@ -27,7 +27,7 @@ export function Footer() {
           <div>
             <h3 style={{ color: '#ff4d4f', marginBottom: '15px' }}>Liên hệ</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: '10px', color: '#888' }}>📞 Hotline: 1900 1234</li>
+              <li style={{ marginBottom: '10px', color: '#888' }}>📞 Hotline: 0987 412 750</li>
               <li style={{ marginBottom: '10px', color: '#888' }}>📧 Email: casio@store.com</li>
             </ul>
           </div>
