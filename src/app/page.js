@@ -5,17 +5,7 @@ import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 
 const PRODUCTS = [
-  { 
-    id: 1, 
-    name: "Máy tính Casio fx-580VN X", 
-    image: "/casio-fx-580vn-den.JPG", 
-    price: "789.000đ", 
-    oldPrice: "890.000đ", 
-    discount: "-11%", 
-    remain: "Còn 15/50 suất",
-    support: "16.000đ",
-    finalPrice: "769.000đ"
-  },
+  
   { 
     id: 2, 
     name: "Máy tính Casio fx-880BTG", 
