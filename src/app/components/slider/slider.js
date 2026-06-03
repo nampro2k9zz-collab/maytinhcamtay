@@ -1,44 +1,70 @@
-'use client';
+'use client'
+import React, { useEffect, useState } from "react";
 
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+export default function SimpleSlider({ images, selectedColor, onSelectColor }) {
+  const [isClient, setIsClient] = useState(false);
 
-export default function SimpleSlider({ images = [], selectedColor, onSelectColor }) {
-  if (!images || images.length === 0) {
-    return null;
-  }
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
-  var settings = {
-    dots: true,
-    infinite: images.length > 1,
-    speed: 500,
-    slidesToShow: Math.min(3, images.length),
-    slidesToScroll: 1,
-    autoplay: false,
-    arrows: true,
-    pauseOnHover: true,
-  };
+  if (!isClient || !images || images.length === 0) return null;
 
   return (
-    <div style={{ width: '100%', marginTop: '10px' }}>
-      <Slider {...settings}>
-        {images.map((item, index) => (
-          <div key={index} style={{ cursor: 'pointer', textAlign: 'center' }} onClick={() => onSelectColor && onSelectColor(item.color)}>
-            <div style={{
-              background: '#fff',
-              borderRadius: '8px',
-              padding: '5px',
-              border: selectedColor === item.color ? '2px solid #ff4d4f' : '1px solid #ddd',
-              transition: 'all 0.3s ease'
-            }}>
-              <img src={item.src} alt={item.color} style={{ width: '100%', height: '70px', objectFit: 'contain' }} />
+    <div style={{ marginTop: "20px" }}>
+      <p style={{ fontSize: "14px", marginBottom: "10px", color: "#aaa", fontWeight: "500" }}>
+        Chọn màu sắc:
+      </p>
+      
+      {/* Thanh Slider bằng CSS Flexbox */}
+      <div 
+        style={{ 
+          display: "flex", 
+          gap: "12px", 
+          overflowX: "auto", 
+          paddingBottom: "10px",
+          scrollBehavior: "smooth",
+          WebkitOverflowScrolling: "touch"
+        }}
+      >
+        {images.map((item, index) => {
+          const isActive = item.color === selectedColor;
+          return (
+            <div
+              key={index}
+              onClick={() => onSelectColor(item.color)}
+              style={{
+                border: isActive ? "2px solid #ff4d4f" : "1px solid #333",
+                borderRadius: "10px",
+                padding: "10px 14px",
+                cursor: "pointer",
+                background: isActive ? "rgba(255, 77, 79, 0.1)" : "#161616",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                minWidth: "130px",
+                flexShrink: 0,
+                transition: "all 0.2s ease",
+                userSelect: "none"
+              }}
+            >
+              {/* Ảnh thu nhỏ */}
+              <div style={{ width: "35px", height: "35px", background: "#fff", borderRadius: "6px", display: "flex", alignItems: "center", justifyContent: "center", padding: "2px" }}>
+                <img 
+                  src={item.src} 
+                  alt={item.color} 
+                  style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} 
+                />
+              </div>
+
+              {/* Tên màu */}
+              <span style={{ fontSize: "13px", color: isActive ? "#ff4d4f" : "#fff", fontWeight: isActive ? "bold" : "normal" }}>
+                {item.color}
+              </span>
             </div>
-            <p style={{ textAlign: 'center', marginTop: '5px', fontSize: '11px', color: '#888' }}>{item.color}</p>
-          </div>
-        ))}
-      </Slider>
+          );
+        })}
+      </div>
     </div>
   );
 }

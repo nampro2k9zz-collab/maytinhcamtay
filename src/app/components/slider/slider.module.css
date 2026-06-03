@@ -1,104 +1,97 @@
-.sliderWrapper {
+.verticalStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
-  margin-top: 10px;
 }
 
-/* Custom style cho slider */
-.sliderWrapper :global(.slick-slide) {
-  padding: 0 8px;
-}
-
-.sliderWrapper :global(.slick-track) {
+/* Khung chứa ảnh to ở trên */
+.mainImageContainer {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  height: 380px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sliderWrapper :global(.slick-prev),
-.sliderWrapper :global(.slick-next) {
-  width: 28px !important;
-  height: 28px !important;
-  background: rgba(0, 0, 0, 0.5) !important;
-  border-radius: 50% !important;
-  transition: all 0.3s ease !important;
+.bottomSliderContainer {
+  width: 100%;
 }
 
-.sliderWrapper :global(.slick-prev:hover),
-.sliderWrapper :global(.slick-next:hover) {
-  background: #ff4d4f !important;
+/* Thanh cuộn ngang mượt mà tự chế thay cho thư viện */
+.customSliderTrack {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+  WebkitOverflowScrolling: touch; /* Vuốt siêu mượt trên điện thoại */
 }
 
-.sliderWrapper :global(.slick-prev:before),
-.sliderWrapper :global(.slick-next:before) {
-  font-size: 14px !important;
-  color: white !important;
-  opacity: 1 !important;
+/* Ẩn thanh scrollbar thô kệch mặc định */
+.customSliderTrack::-webkit-scrollbar {
+  height: 5px;
+}
+.customSliderTrack::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+.customSliderTrack::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4f;
 }
 
-.sliderWrapper :global(.slick-prev) {
-  left: -15px !important;
-}
-
-.sliderWrapper :global(.slick-next) {
-  right: -15px !important;
-}
-
-.sliderWrapper :global(.slick-dots) {
-  bottom: -25px !important;
-}
-
-.sliderWrapper :global(.slick-dots li button:before) {
-  font-size: 8px !important;
-  color: #888 !important;
-  opacity: 1 !important;
-}
-
-.sliderWrapper :global(.slick-dots li.slick-active button:before) {
-  color: #ff4d4f !important;
-}
-
-.thumbItem {
-  cursor: pointer;
-  text-align: center;
-}
-
+/* Ô bọc ảnh nhỏ và chữ */
 .thumbBox {
-  background: #fff;
-  border-radius: 8px;
-  padding: 5px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 110px;
+  flex-shrink: 0; /* Không cho ô bị bóp méo khi màn hình nhỏ */
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
 }
 
 .thumbBox:hover {
-  transform: scale(1.05);
-  border-color: #ff4d4f;
+  border-color: #555;
+  background: #1f1f1f;
+  transform: translateY(-2px);
 }
 
+/* Khi ô màu đó được chọn */
 .activeThumb {
-  border-color: #ff4d4f;
-  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.3);
+  border: 2px solid #ff4d4f !important;
+  background: rgba(255, 77, 79, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2);
 }
 
-.thumbImage {
-  width: 100%;
-  height: 70px;
-  object-fit: contain;
-}
-
-.thumbLabel {
+.colorLabel {
+  font-size: 12px;
+  color: #eee;
+  font-weight: 500;
   text-align: center;
-  margin-top: 5px;
-  font-size: 11px;
-  color: #888;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media (max-width: 768px) {
-  .sliderWrapper :global(.slick-prev),
-  .sliderWrapper :global(.slick-next) {
-    display: none !important;
-  }
-  
-  .thumbImage {
-    height: 55px;
-  }
+.activeThumb .colorLabel {
+  color: #ff4d4f;
+  font-weight: 600;
+}
+
+.loadingPlaceholder {
+  color: #aaa;
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
 }
