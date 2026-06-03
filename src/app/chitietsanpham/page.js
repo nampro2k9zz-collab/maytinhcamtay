@@ -7,8 +7,84 @@ import { Footer } from "../components/footer/footer";
 import ImageSlider from "../components/slider/slider";
 
 const PRODUCTS = {
-  1: { id: 1, name: "Máy tính Casio fx-580VN X", price: "789.000đ", oldPrice: "890.000đ", discount: "-11%", image: "/casio-fx-580vn-den.JPG", colors: ["Đen"], colorImages: { "Đen": "/casio-fx-580vn-den.JPG" }, remain: "Còn 15/50 suất", rating: 4.8, sold: 245, description: "Máy tính Casio fx-580VN X là dòng máy tính khoa học cao cấp nhất hiện nay.", mota1: "✅ 696 chức năng tính toán đa dạng", mota2: "✅ Màn hình Natural Display", mota3: "✅ Giải phương trình, ma trận, số phức", mota4: "✅ Tính tích phân, vi phân", mota5: "✅ Nguồn năng lượng kép", specs: ["Màn hình: LCD Natural Display", "Chức năng: 696 chức năng", "Nguồn điện: Pin mặt trời + pin CR2032", "Kích thước: 162 x 80 x 12.7 mm", "Trọng lượng: 105g"] },
-  2: { id: 2, name: "Máy tính Casio fx-880BTG", price: "629.000đ", oldPrice: "890.000đ", discount: "-29%", image: "/Casio fx-880BTG-den.JPG", colors: ["Đen", "Hồng", "Xanh dương"], colorImages: { "Đen": "/Casio fx-880BTG-den.JPG", "Hồng": "/Casio fx-880BTG-hong.JPG", "Xanh dương": "/Casio fx-880BTG-xanhduong.JPG" }, remain: "Còn 20/50 suất", rating: 4.9, sold: 189, description: "Casio fx-880BTG là máy tính đồ họa màu cao cấp.", mota1: "✅ Màn hình LCD 4.8 inch hiển thị màu", mota2: "✅ Vẽ đồ thị hàm số trực quan", mota3: "✅ Tính năng lập trình đơn giản", mota4: "✅ Phù hợp cho các kỳ thi quốc tế", mota5: "✅ 3 màu: Đen, Hồng, Xanh dương", specs: ["Màn hình: LCD 4.8 inch màu", "Độ phân giải: 192 x 108 pixel", "Nguồn điện: Pin AAA x 4", "Chức năng: Vẽ đồ thị, giải toán, lập trình", "Kích thước: 185 x 85 x 18 mm", "Trọng lượng: 230g"] }
+  1: {
+    id: 1, name: "Máy tính Casio fx-580VN X", price: "789.000đ", oldPrice: "890.000đ", discount: "-11%",
+    image: "/casio-fx-580vn-den.JPG", colors: ["Đen"], colorImages: { "Đen": "/casio-fx-580vn-den.JPG" },
+    remain: "Còn 15/50 suất", rating: 4.8, sold: 245,
+    description: "Máy tính Casio fx-580VN X là dòng máy tính khoa học cao cấp nhất hiện nay.",
+    mota1: "✅ 696 chức năng tính toán đa dạng", mota2: "✅ Màn hình Natural Display",
+    mota3: "✅ Giải phương trình, ma trận, số phức", mota4: "✅ Tính tích phân, vi phân",
+    mota5: "✅ Nguồn năng lượng kép",
+    specs: ["Màn hình: LCD Natural Display", "Chức năng: 696 chức năng", "Nguồn điện: Pin mặt trời + pin CR2032", "Kích thước: 162 x 80 x 12.7 mm", "Trọng lượng: 105g"]
+  },
+  2: {
+    id: 2, name: "Máy tính Casio fx-880BTG", price: "629.000đ", oldPrice: "890.000đ", discount: "-29%",
+    image: "/Casio fx-880BTG-den.JPG", colors: ["Đen", "Hồng", "Xanh dương"],
+    colorImages: { "Đen": "/Casio fx-880BTG-den.JPG", "Hồng": "/Casio fx-880BTG-hong.JPG", "Xanh dương": "/Casio fx-880BTG-xanhduong.JPG" },
+    remain: "Còn 20/50 suất", rating: 4.9, sold: 189,
+    description: "Casio fx-880BTG là máy tính đồ họa màu cao cấp, màn hình LCD 4.8 inch.",
+    mota1: "✅ Màn hình LCD 4.8 inch hiển thị màu", mota2: "✅ Vẽ đồ thị hàm số trực quan",
+    mota3: "✅ Tính năng lập trình đơn giản", mota4: "✅ Phù hợp cho các kỳ thi quốc tế",
+    mota5: "✅ 3 màu: Đen, Hồng, Xanh dương",
+    specs: ["Màn hình: LCD 4.8 inch màu", "Độ phân giải: 192 x 108 pixel", "Nguồn điện: Pin AAA x 4", "Chức năng: Vẽ đồ thị, giải toán, lập trình", "Kích thước: 185 x 85 x 18 mm", "Trọng lượng: 230g"]
+  },
+  3: {
+    id: 3, name: "Máy tính Casio FX570VN Plus New", price: "619.000đ", oldPrice: "790.000đ", discount: "-22%",
+    image: "/Casio FX570VN Plus den.JPG", colors: ["Đen"], colorImages: { "Đen": "/Casio FX570VN Plus den.JPG" },
+    remain: "Còn 25/50 suất", rating: 4.7, sold: 156,
+    description: "Casio FX570VN Plus New là máy tính khoa học được ưa chuộng nhất tại Việt Nam.",
+    mota1: "✅ 696 chức năng tính toán", mota2: "✅ Màn hình Natural Display",
+    mota3: "✅ Giải phương trình, hệ phương trình", mota4: "✅ Tính ma trận, số phức, thống kê",
+    mota5: "✅ Được phép sử dụng trong các kỳ thi",
+    specs: ["Màn hình: Natural Display", "Chức năng: 696 chức năng", "Nguồn điện: Pin mặt trời + pin CR2032", "Kích thước: 162 x 80 x 12.7 mm", "Trọng lượng: 105g"]
+  },
+  4: {
+    id: 4, name: "Máy tính Casio AX120B", price: "359.000đ", oldPrice: "420.000đ", discount: "-15%",
+    image: "/Casio AX120B xam.JPG", colors: ["Xám"], colorImages: { "Xám": "/Casio AX120B xam.JPG" },
+    remain: "Còn 30/50 suất", rating: 4.5, sold: 98,
+    description: "Máy tính Casio AX120B chính hãng, máy tính bỏ túi cơ bản, thiết kế nhỏ gọn.",
+    mota1: "✅ Màn hình LCD lớn dễ đọc", mota2: "✅ 12 chữ số hiển thị", mota3: "✅ Nguồn năng lượng kép",
+    mota4: "✅ Thiết kế nhỏ gọn, đẹp mắt", mota5: "✅ Độ bền cao, sử dụng lâu dài",
+    specs: ["Màn hình: LCD", "Số chữ số: 12 chữ số", "Nguồn điện: Pin mặt trời + pin dự phòng", "Kích thước: 120 x 72 x 12 mm", "Trọng lượng: 95g"]
+  },
+  5: {
+    id: 5, name: "Máy tính Casio FX570ES Plus New", price: "589.000đ", oldPrice: "780.000đ", discount: "-25%",
+    image: "/Casio FX570ES Plus.JPG", colors: ["Trắng", "Xám"],
+    colorImages: { "Trắng": "/Casio FX570ES Plus.JPG", "Xám": "/Casio FX570ES Plus xam.JPG" },
+    remain: "Còn 18/50 suất", rating: 4.8, sold: 312,
+    description: "Casio FX570ES Plus New là máy tính khoa học với 417 chức năng, giá cả hợp lý.",
+    mota1: "✅ 417 chức năng tính toán", mota2: "✅ Màn hình Natural Display",
+    mota3: "✅ Giải phương trình, ma trận", mota4: "✅ Tính số phức, thống kê",
+    mota5: "✅ Thiết kế nhỏ gọn, dễ sử dụng",
+    specs: ["Màn hình: Natural Display", "Chức năng: 417 chức năng", "Nguồn điện: Pin mặt trời + pin CR2032", "Kích thước: 162 x 80 x 12.7 mm", "Trọng lượng: 105g"]
+  },
+  6: {
+    id: 6, name: "Máy tính Casio MX120B", price: "249.000đ", oldPrice: "280.000đ", discount: "-11%",
+    image: "/Casio AX12B den.png", colors: ["Đen"], colorImages: { "Đen": "/Casio AX12B den.png" },
+    remain: "Còn 40/50 suất", rating: 4.4, sold: 567,
+    description: "Máy tính Casio MX120B chính hãng, giá rẻ, phù hợp cho học sinh.",
+    mota1: "✅ Giá thành rẻ, phù hợp học sinh", mota2: "✅ Màn hình LCD rõ nét",
+    mota3: "✅ 12 chữ số hiển thị", mota4: "✅ Nguồn năng lượng kép", mota5: "✅ Thiết kế chắc chắn, bền bỉ",
+    specs: ["Màn hình: LCD", "Số chữ số: 12 chữ số", "Nguồn điện: Pin mặt trời + pin dự phòng", "Kích thước: 120 x 72 x 12 mm", "Trọng lượng: 90g"]
+  },
+  7: {
+    id: 7, name: "Máy tính Casio AX12B", price: "299.000đ", oldPrice: "350.000đ", discount: "-15%",
+    image: "/Casio AX12B den.png", colors: ["Đen"], colorImages: { "Đen": "/Casio AX12B den.png" },
+    remain: "Còn 35/50 suất", rating: 4.6, sold: 423,
+    description: "Máy tính Casio AX12B chính hãng, thiết kế hiện đại, độ bền cao.",
+    mota1: "✅ Thiết kế hiện đại, sang trọng", mota2: "✅ Màn hình LCD lớn", mota3: "✅ 12 chữ số hiển thị",
+    mota4: "✅ Nguồn năng lượng kép", mota5: "✅ Độ bền cao, sử dụng lâu dài",
+    specs: ["Màn hình: LCD", "Số chữ số: 12 chữ số", "Nguồn điện: Pin mặt trời + pin dự phòng", "Kích thước: 120 x 72 x 12 mm", "Trọng lượng: 95g"]
+  },
+  8: {
+    id: 8, name: "Máy tính Casio GX12B", price: "449.000đ", oldPrice: "600.000đ", discount: "-25%",
+    image: "/Casio AX12B den.png", colors: ["Đen"], colorImages: { "Đen": "/Casio AX12B den.png" },
+    remain: "Còn 22/50 suất", rating: 4.7, sold: 345,
+    description: "Máy tính Casio GX12B chính hãng, máy tính văn phòng cao cấp.",
+    mota1: "✅ Màn hình LCD lớn dễ đọc", mota2: "✅ 12 chữ số hiển thị", mota3: "✅ Nguồn năng lượng kép",
+    mota4: "✅ Thiết kế sang trọng, chắc chắn", mota5: "✅ Phù hợp cho kế toán, văn phòng",
+    specs: ["Màn hình: LCD lớn", "Số chữ số: 12 chữ số", "Nguồn điện: Pin mặt trời + pin dự phòng", "Kích thước: 130 x 75 x 15 mm", "Trọng lượng: 110g"]
+  }
 };
 
 function ChiTietSanPhamContent() {
@@ -58,7 +134,7 @@ function ChiTietSanPhamContent() {
             </div>
 
             <div style={{ background: '#1a1a1a', borderRadius: '12px', padding: '15px' }}>
-              <p style={{ fontSize: '28px', color: '#ff4d4f', fontWeight: 'bold' }}>{product.price}</p>
+              <p style={{ fontSize: '28px', color: '#ff4d4f', fontWeight: 'bold' }}>{product.price} <span style={{ fontSize: '16px', color: '#888', textDecoration: 'line-through' }}>{product.oldPrice}</span></p>
               <button onClick={handleBuyNow} style={{ width: '100%', padding: '14px', background: '#ff4d4f', color: 'white', border: 'none', borderRadius: '10px', fontWeight: 'bold', cursor: 'pointer' }}>🛒 MUA NGAY</button>
             </div>
 
@@ -93,7 +169,11 @@ function ChiTietSanPhamContent() {
           </div>
           <div style={{ padding: '25px' }}>
             {activeTab === "description" ? (
-              <div><p style={{ lineHeight: '1.8', color: '#ccc' }}>{product.description}</p></div>
+              <div><p style={{ lineHeight: '1.8', color: '#ccc' }}>{product.description}</p>
+              <div style={{ background: '#1a1a1a', padding: '15px', borderRadius: '10px', marginTop: '20px' }}>
+                <h4 style={{ color: '#ff4d4f' }}>✨ Tính năng nổi bật:</h4>
+                <ul style={{ color: '#ccc', paddingLeft: '20px' }}><li>{product.mota1}</li><li>{product.mota2}</li><li>{product.mota3}</li><li>{product.mota4}</li><li>{product.mota5}</li></ul>
+              </div></div>
             ) : (
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <tbody>{product.specs.map((spec, i) => (<tr key={i} style={{ borderBottom: '1px solid #333' }}><td style={{ padding: '12px', fontWeight: 'bold', color: '#fff', width: '35%' }}>📌 {spec.split(":")[0]}:</td><td style={{ padding: '12px', color: '#ccc' }}>{spec.split(":")[1] || ""}</td></tr>))}</tbody>
